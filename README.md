@@ -1,3 +1,17 @@
+# 딸깍 프로젝트
+
+```
+nvm use
+pnpm install
+turbo dev
+```
+
+
+
+
+
+
+---
 # Turborepo starter
 
 This is an official starter Turborepo.
