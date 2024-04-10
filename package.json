@@ -5,7 +5,16 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "app/**/*.{ts,tsx}": [
+      "turbo lint --fix"
+    ],
+    "packages/**/*.{ts,tsx}": [
+      "turbo lint --fix"
+    ]
   },
   "devDependencies": {
     "@ddal-kkak/eslint-config": "workspace:*",
