@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint . --max-warnings 0"
+    "lint": "eslint . --max-warnings 0",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@ddal-kkak/ui": "workspace:*",
@@ -15,14 +17,18 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^14.1.1",
     "@ddal-kkak/eslint-config": "workspace:*",
     "@ddal-kkak/typescript-config": "workspace:*",
+    "@next/eslint-plugin-next": "^14.1.1",
+    "@testing-library/react": "^14.3.0",
     "@types/eslint": "^8.56.5",
     "@types/node": "^20.11.24",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
+    "@vitejs/plugin-react": "^4.2.1",
     "eslint": "^8.57.0",
-    "typescript": "^5.3.3"
+    "jsdom": "^24.0.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.4.0"
   }
 }
