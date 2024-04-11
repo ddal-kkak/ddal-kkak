@@ -1,9 +1,8 @@
-# vercel-merge.yml
-name: Deploy to vercel on merge
+name: Deploy to develop
 on:
   push:
     branches:
-      - feature/deploy-action
+      - develop
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
