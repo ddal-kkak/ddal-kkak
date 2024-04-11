@@ -1,0 +1,9 @@
+message="$(cat $1)"
+requiredPattern="^(FEAT:|FIX:|DOCS:|STYLE:|UPDATE:|REFACTOR:|TEST:|CHORE:|Merge|v) .*$"
+if ! [[ $message =~ $requiredPattern ]];
+then
+  echo "허용된 prefix 단어들은: 'FEAT:' 'FIX:' 'DOCS:' 'STYLE:' 'UPDATE:' 'REFACTOR:' 'TEST:' 'CHORE:' 'Merge' 'v'"
+  exit 1
+fi
+
+pnpm lint-staged
