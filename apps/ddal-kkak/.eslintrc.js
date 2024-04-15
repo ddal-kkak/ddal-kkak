@@ -4,6 +4,6 @@ module.exports = {
   extends: ["@ddal-kkak/eslint-config/next.js"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    project: true,
+    project: "./tsconfig.json",
   },
 };
