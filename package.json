@@ -12,10 +12,10 @@
   },
   "lint-staged": {
     "app/**/*.{ts,tsx}": [
-      "turbo lint --fix"
+      "turbo lint -- --fix"
     ],
     "packages/**/*.{ts,tsx}": [
-      "turbo lint --fix"
+      "turbo lint -- --fix"
     ]
   },
   "devDependencies": {
