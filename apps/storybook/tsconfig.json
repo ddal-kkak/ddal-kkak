@@ -1,0 +1,10 @@
+{
+  "extends": "@ddal-kkak/typescript-config/react-library.json",
+  "include": [
+    "stories/**/*"
+  ],
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "moduleResolution": "NodeNext"
+  }
+}
