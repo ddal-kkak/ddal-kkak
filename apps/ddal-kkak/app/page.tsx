@@ -1,8 +1,8 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import {Code} from "@ddal-kkak/ui/code";
-import {Button} from "@ddal-kkak/ui/button";
-import {Card} from "@ddal-kkak/ui/card";
+import { Code } from "@ddal-kkak/ui/code";
+import { Button } from "@ddal-kkak/ui/button";
+import { Card } from "@ddal-kkak/ui/card";
 
 function Gradient({
   conic,
@@ -54,6 +54,7 @@ const LINKS = [
 export default function Page(): JSX.Element {
   return (
     <main className={styles.main}>
+      <div className={"bg-pink-500"}>Tailwind Setting Test</div>
       <div className={styles.description}>
         <p>
           examples/basic&nbsp;

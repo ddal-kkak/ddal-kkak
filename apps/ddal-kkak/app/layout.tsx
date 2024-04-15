@@ -1,4 +1,5 @@
 import "./globals.css";
+import "@ddal-kkak/tailwind-config/base.tailwind.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
