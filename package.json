@@ -8,14 +8,19 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "prepare": "husky",
     "test": "turbo run test",
-    "test:watch": "turbo run test:watch"
+    "test:watch": "turbo run test:watch",
+    "prettier": "prettier --write \"{app,packages}/**/*.{ts,tsx}\"",
+    "prettier-staged": "prettier --staged --write \"{app,packages}/**/*.{ts,tsx}\" ${staged}",
+    "lint-staged": "lint-staged"
   },
   "lint-staged": {
     "app/**/*.{ts,tsx}": [
-      "turbo lint -- --fix"
+      "turbo lint -- --fix",
+      "prettier --write"
     ],
     "packages/**/*.{ts,tsx}": [
-      "turbo lint -- --fix"
+      "turbo lint -- --fix",
+      "prettier --write"
     ]
   },
   "devDependencies": {
@@ -23,7 +28,7 @@
     "@ddal-kkak/typescript-config": "workspace:*",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
-    "prettier": "^3.2.5",
+    "prettier": "3.2.5",
     "turbo": "latest"
   },
   "packageManager": "pnpm@8.9.0",
