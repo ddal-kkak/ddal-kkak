@@ -1,0 +1,13 @@
+{
+  "name": "@ddal-kkak/shared",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "types": "index.ts",
+  "files": [
+    "./*"
+  ],
+  "dependencies": {
+    "clsx": "^2.1.0",
+    "tailwind-merge": "^2.2.2"
+  }
+}
