@@ -111,6 +111,9 @@ importers:
       '@storybook/test':
         specifier: ^8.0.6
         version: 8.0.6
+      chromatic:
+        specifier: ^11.3.0
+        version: 11.3.0
       prop-types:
         specifier: ^15.8.1
         version: 15.8.1
@@ -144,6 +147,8 @@ importers:
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
+
+  packages/tailwind-config: {}
 
   packages/typescript-config: {}
 
