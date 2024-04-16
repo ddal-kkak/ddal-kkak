@@ -23,6 +23,7 @@
     "@storybook/test": "^8.0.6",
     "@types/react": "^18.2.61",
     "@vitejs/plugin-react": "^4.2.1",
+    "chromatic": "^11.3.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

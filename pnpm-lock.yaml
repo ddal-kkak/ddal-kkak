@@ -136,6 +136,10 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^4.2.1
         version: 4.2.1(vite@5.2.8)
+      chromatic:
+        specifier: ^11.3.0
+        version: 11.3.0
+
       prop-types:
         specifier: ^15.8.1
         version: 15.8.1
