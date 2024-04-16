@@ -1,5 +1,5 @@
 {
-  "name": "@ddal-kkak/lib",
+  "name": "@ddal-kkak/shared",
   "version": "1.0.0",
   "main": "index.ts",
   "types": "index.ts",
