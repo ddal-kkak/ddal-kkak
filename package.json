@@ -10,7 +10,6 @@
     "test": "turbo run test",
     "test:watch": "turbo run test:watch",
     "prettier": "prettier --write \"{app,packages}/**/*.{ts,tsx}\"",
-    "prettier-staged": "prettier --staged --write \"{app,packages}/**/*.{ts,tsx}\" ${staged}",
     "lint-staged": "lint-staged"
   },
   "lint-staged": {
