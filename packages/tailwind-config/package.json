@@ -1,0 +1,10 @@
+{
+  "name": "@ddal-kkak/tailwind-config",
+  "version": "1.0.0",
+  "main": "index.js",
+  "files": [
+    "tailwind.config.js",
+    "postcss.config.js",
+    "tailwind-base.css"
+  ]
+}
