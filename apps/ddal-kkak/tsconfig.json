@@ -16,6 +16,6 @@
     "tailwind.config.js",
     "postcss.config.js",
     "store/**/*"
-  ],
+, "vitest.config.mts"  ],
   "exclude": ["node_modules"]
 }
