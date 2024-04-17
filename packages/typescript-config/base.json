@@ -10,7 +10,7 @@
     "lib": ["es2022", "DOM", "DOM.Iterable"],
     "module": "Node16",
     "moduleDetection": "force",
-    "moduleResolution": "Node",
+    "moduleResolution": "Node16",
     "noUncheckedIndexedAccess": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,

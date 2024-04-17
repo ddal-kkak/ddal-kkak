@@ -5,6 +5,6 @@
   ],
   "compilerOptions": {
     "jsx": "react-jsx",
-    "moduleResolution": "NodeNext"
+    "moduleResolution": "Node16"
   }
 }
