@@ -36,6 +36,7 @@
     "vite": "^5.2.9"
   },
   "dependencies": {
+    "@ddal-kkak/shared": "workspace:^",
     "@ddal-kkak/ui": "workspace:^"
   }
 }
