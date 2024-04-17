@@ -1,3 +1,5 @@
+import "@ddal-kkak/tailwind-config/base.tailwind.css";
+
 /** @type { import('@storybook/react').Preview } */
 const preview = {
   parameters: {
