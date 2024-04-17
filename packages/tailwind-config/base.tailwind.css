@@ -1,3 +1,99 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root{
+    --white: #FFFFFF;
+    --black: #000000;
+
+    --gray-10: #F1F1F2;
+    --gray-20: #E3E3E5;
+    --gray-30: #C8C8CC;
+    --gray-40: #A0A0A5;
+    --gray-50: #7C7C80;
+    --gray-60: #555559;
+    --gray-70: #3D3D40;
+    --gray-80: #242426;
+    --gray-90: #181819;
+
+    --green-10: #E1F5EA;
+    --green-50: #49B87A;
+    --green-90: #003316;
+
+    --mint-10: #E2F6F6;
+    --mint-50: #33B8B8;
+    --mint-90: #003838;
+
+    --blue-10: #E7F2FE;
+    --blue-50: #4597F7;
+    --blue-90: #002652;
+
+    --red-10: #FAE7E6;
+    --red-50: #F25C51;
+    --red-90: #380400;
+
+
+    --ui-00: var(--gray-90);
+    --ui-01: var(--gray-70);
+    --ui-02: var(--gray-50);
+    --ui-03: var(--gray-30);
+    --ui-04: var(--gray-20);
+    --ui-05: var(--gray-10);
+    --ui-06: var(--white);
+    --ui-07: var(--black);
+    --solid-text: var(--white);
+
+    --line-01: var(--gray-20);
+    --lien-02: var(--gray-40);
+
+    --bg-01: var(--white);
+    --bg-02: var(--white);
+    --bg-03: var(--gray-10);
+
+
+    --brand-01: var(--green-50);
+    --brand-02: var(--green-10);
+
+    --primary-01: var(--mint-50);
+    --primary-02: var(--mint-10);
+
+    --secondary-01: var(--blue-50);
+    --secondary-02: var(--blue-10);
+
+    --error-01: var(--red-50);
+    --error-02: var(--red-10);
+
+    [data-theme='dark'] {
+        --ui-00: var(--white);
+        --ui-01: var(--gray-20);
+        --ui-02: var(--gray-50);
+        --ui-03: var(--gray-70);
+        --ui-04: var(--gray-80);
+        --ui-05: var(--gray-90);
+        --ui-06: var(--black);
+        --ui-07: var(--white);
+
+        --line-01: var(--gray-80);
+        --lien-02: var(--gray-60);
+
+        --bg-01: var(--black);
+        --bg-02: var(--gray-90);
+        --bg-03: var(--gray-90);
+    }
+
+
+
+    --spacing-0: 0;
+    --spacing-2: 2px;
+    --spacing-4: 4px;
+    --spacing-8: 8px;
+    --spacing-12: 12px;
+    --spacing-20: 20px;
+    --spacing-32: 32px;
+    --spacing-52: 52px;
+    --spacing-84: 84px;
+    --spacing-136: 136px;
+
+    --shadow-01: 0px 1px 2px 0px rgba(0, 0, 0, 0.08);
+    --table-shadow: -1px 0px 2px 0px rgba(0, 0, 0, 0.08);
+}
