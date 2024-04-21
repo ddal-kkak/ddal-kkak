@@ -9,8 +9,8 @@ const inputVariants = cva(
     "placeholder:text-ui-03",
     "rounded-lg border border-line-01",
     "focus:outline-none",
-    "focus:border-primary-01 focus:ring-primary-01",
-    "focus:invalid:border-danger-01 focus:invalid:ring-danger-01",
+    "focus:border-primary-01",
+    "focus:invalid:border-danger-01 ",
     "disabled:bg-ui-05 disabled:text-ui-02 disabled:cursor-not-allowed",
   ],
   {
