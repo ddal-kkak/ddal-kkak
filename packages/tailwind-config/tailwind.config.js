@@ -75,9 +75,9 @@ module.exports = {
           "01": "var(--secondary-01)",
           "02": "var(--secondary-02)",
         },
-        error: {
-          "01": "var(--error-01)",
-          "02": "var(--error-02)",
+        danger: {
+          "01": "var(--danger-01)",
+          "02": "var(--danger-02)",
         },
       },
 
