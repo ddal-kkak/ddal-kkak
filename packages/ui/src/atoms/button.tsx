@@ -61,7 +61,6 @@ const buttonVariants = cva(["bg-ui-01 border", "rounded-lg"], {
       theme: "danger",
       className: "text-white bg-danger-01",
     },
-    {},
   ],
   defaultVariants: {
     variant: "solid",
