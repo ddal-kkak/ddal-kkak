@@ -60,8 +60,8 @@
     --secondary-01: var(--blue-50);
     --secondary-02: var(--blue-10);
 
-    --error-01: var(--red-50);
-    --error-02: var(--red-10);
+    --danger-01: var(--red-50);
+    --danger-02: var(--red-10);
 
     [data-theme='dark'] {
         --ui-00: var(--white);
@@ -96,4 +96,118 @@
 
     --shadow-01: 0px 1px 2px 0px rgba(0, 0, 0, 0.08);
     --table-shadow: -1px 0px 2px 0px rgba(0, 0, 0, 0.08);
+
+    .headline-60 {
+        font-size: 3.75rem;
+        line-height: 5rem;
+        font-weight: 700;
+    }
+
+    .headline-48 {
+        font-size: 3rem;
+        line-height: 4rem;
+        font-weight: 700;
+    }
+
+    .headline-30 {
+        font-size: 1.875rem;
+        line-height: 2.5rem;
+        font-weight: 700;
+    }
+
+    .headline-24 {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 700;
+    }
+
+    .headline-18 {
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+        font-weight: 700;
+    }
+
+    .headline-15 {
+        font-size: 0.9375rem;
+        line-height: 1.25rem;
+        font-weight: 700;
+    }
+
+    .headline-14 {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        font-weight: 700;
+    }
+
+    .button-18 {
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+        font-weight: 700;
+    }
+
+    .button-15 {
+        font-size: 0.9375rem;
+        line-height: 1.25rem;
+        font-weight: 700;
+    }
+
+    .button-14 {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        font-weight: 700;
+    }
+
+    .button-12 {
+        font-size: 0.75rem;
+        line-height: 1rem;
+        font-weight: 700;
+    }
+
+    .title-18 {
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+        font-weight: 500;
+    }
+
+    .title-15 {
+        font-size: 0.9375rem;
+        line-height: 1.25rem;
+        font-weight: 500;
+    }
+
+    .title-14 {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        font-weight: 500;
+    }
+
+    .title-12 {
+        font-size: 0.75rem;
+        line-height: 1rem;
+        font-weight: 500;
+    }
+
+    .body-18 {
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+        font-weight: 400;
+    }
+
+    .body-15 {
+        font-size: 0.9375rem;
+        line-height: 1.25rem;
+        font-weight: 400;
+    }
+
+    .body-14 {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        font-weight: 400;
+    }
+
+    .body-12 {
+        font-size: 0.75rem;
+        line-height: 1rem;
+        font-weight: 400;
+    }
 }
