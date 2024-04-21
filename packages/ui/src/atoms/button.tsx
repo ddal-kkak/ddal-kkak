@@ -65,7 +65,7 @@ const buttonVariants = cva(["bg-ui-01 border", "rounded-lg"], {
   defaultVariants: {
     variant: "solid",
     theme: "default",
-    size: "lg",
+    size: "md",
   },
 });
 
