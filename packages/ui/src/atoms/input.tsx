@@ -1,3 +1,4 @@
+"use client";
 import { forwardRef, InputHTMLAttributes } from "react";
 import { cn } from "@ddal-kkak/shared";
 import { cva, VariantProps } from "class-variance-authority";
