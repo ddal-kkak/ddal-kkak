@@ -6,7 +6,6 @@
         "name": "next"
       }
     ],
-    "moduleResolution": "Node"
   },
   "include": [
     "next-env.d.ts",
