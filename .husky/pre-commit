@@ -1,1 +1,1 @@
-pnpm lint-staged && git add .
+pnpm lint-staged

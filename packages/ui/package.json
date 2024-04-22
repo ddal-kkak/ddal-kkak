@@ -7,7 +7,7 @@
     "./atoms": "./src/atoms/index.ts"
   },
   "scripts": {
-    "lint": "eslint .",
+    "lint": "eslint . --max-warnings 0",
     "generate:component": "turbo gen react-component"
   },
   "devDependencies": {
