@@ -10,5 +10,5 @@ export default meta;
 
 type Story = StoryObj<typeof Toast>;
 export const Default: Story = {
-  render: () => <Toast />,
+  render: () => <Toast>hi</Toast>,
 };

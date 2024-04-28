@@ -3,18 +3,18 @@
 import { cva, VariantProps } from "class-variance-authority";
 import { cn } from "@ddal-kkak/shared";
 
-const toastVariants = cva([], {
+const toastVariants = cva(["p-3 rounded-lg w-[240px]"], {
   variants: {
     theme: {
-      default: [],
-      brand: [],
-      primary: [],
-      secondary: [],
-      danger: [],
+      default: ["bg-ui-01"],
+      brand: ["bg-brand-01"],
+      primary: ["bg-primary-01"],
+      secondary: ["bg-secondary-01"],
+      danger: ["bg-danger-01"],
     },
     variant: {
-      solid: [],
-      light: [],
+      solid: ["text-white"],
+      light: ["text-ui-01"],
     },
   },
   compoundVariants: [],
@@ -24,10 +24,21 @@ const toastVariants = cva([], {
   },
 });
 
-export type ToastProps = VariantProps<typeof toastVariants>;
+export type ToastProps = VariantProps<typeof toastVariants> & {
+  children?: React.ReactNode;
+  align?: "left" | "center";
+};
 
-function Toast({ variant }: ToastProps) {
-  return <div className={cn(toastVariants({ variant }))}>toast</div>;
+function Toast({ variant, children, align = "left" }: ToastProps) {
+  return (
+    <div className={cn("flex gap-2", toastVariants({ variant }))}>
+      <span>O</span>
+      <div className={cn("flex-1", align === "center" && "text-center")}>
+        {children}
+      </div>
+      <span>X</span>
+    </div>
+  );
 }
 
 Toast.displayName = "Toast";

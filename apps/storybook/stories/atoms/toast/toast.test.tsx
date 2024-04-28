@@ -27,7 +27,7 @@ describe("toast 컴포넌트의 variant를 테스트 합니다.", () => {
   const variantList = ["solid", "light"];
 
   variantList.map(() => {
-    it("", () => {});
+    it("텍스트 색", () => {});
   });
 });
 
