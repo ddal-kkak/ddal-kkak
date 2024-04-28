@@ -8,9 +8,30 @@ const meta: Meta<typeof Button> = {
 };
 
 export default meta;
+
 type Story = StoryObj<typeof Button>;
+
 export const Default: Story = {
-  render: () => <Button>Click me!</Button>,
+  args: {
+    children: "Click me!",
+    variant: "solid",
+    theme: "default",
+    size: "md",
+  },
+  argTypes: {
+    variant: {
+      control: "select",
+      options: ["solid", "light", "outline", "ghost", "text"],
+    },
+    theme: {
+      control: "select",
+      options: ["default", "gray", "brand", "primary", "secondary", "danger"],
+    },
+    size: {
+      control: "select",
+      options: ["sm", "md", "lg", "xl"],
+    },
+  },
 };
 
 type ButtonVariantAndColor = {
