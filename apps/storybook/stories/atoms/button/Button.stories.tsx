@@ -89,7 +89,7 @@ export const ButtonShowcase = () => {
     <div className={"space-y-2"}>
       {[solidList, lightList, outlineList, ghostList, textList].map(
         (list, index) => (
-          <div>
+          <div key={index}>
             <h2 className={"headline-18 mb-2"}>
               {(list[0] as ButtonVariantAndColor).variant}
             </h2>
