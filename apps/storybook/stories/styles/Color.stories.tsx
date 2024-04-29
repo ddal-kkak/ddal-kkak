@@ -3,7 +3,7 @@ import {
   Brand as _Brand,
   Primary as _Primary,
   Secondary as _Secondary,
-  ErrorColor,
+  DangerColor,
 } from "@ddal-kkak/ui/styles";
 
 const meta: Meta = {
@@ -24,6 +24,6 @@ export const Secondary = {
   render: () => <_Secondary />,
 };
 
-export const Error = {
-  render: () => <ErrorColor />,
+export const Danger = {
+  render: () => <DangerColor />,
 };
