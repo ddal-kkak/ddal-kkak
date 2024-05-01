@@ -18,7 +18,6 @@ export default meta;
 type Story = StoryObj<ToastExampleProps>;
 
 const ToastExample = (props: ToastExampleProps) => {
-  console.log("props", props);
   const { toast } = useToast();
   const handleClick = () => {
     toast({
@@ -36,7 +35,7 @@ export const Default: Story = {
   ),
   args: {
     message: "토스트 메시지",
-    isX: true,
+    isShowCloseIcon: true,
     align: "left",
     theme: "default",
     variant: "solid",
@@ -55,7 +54,7 @@ export const Default: Story = {
         type: "radio",
       },
     },
-    isX: {
+    isShowCloseIcon: {
       control: {
         type: "boolean",
       },
@@ -117,11 +116,11 @@ export const Align = () => {
       <Toast align={"center"}>메시지</Toast>
       <div className={"py-2"} />
       <div>left</div>
-      <Toast align={"left"} isX={false}>
+      <Toast align={"left"} isShowCloseIcon={false}>
         메시지
       </Toast>
       <div>center</div>
-      <Toast align={"center"} isX={false}>
+      <Toast align={"center"} isShowCloseIcon={false}>
         메시지
       </Toast>
     </div>
