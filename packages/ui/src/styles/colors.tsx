@@ -27,11 +27,11 @@ export function Secondary() {
   );
 }
 
-export function ErrorColor() {
+export function DangerColor() {
   return (
     <div>
-      <Square className={"bg-error-01"} />
-      <Square className={"bg-error-02"} />
+      <Square className={"bg-danger-01"} />
+      <Square className={"bg-danger-02"} />
     </div>
   );
 }
