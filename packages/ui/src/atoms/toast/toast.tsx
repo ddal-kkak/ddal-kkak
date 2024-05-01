@@ -3,6 +3,7 @@
 import { cva, VariantProps } from "class-variance-authority";
 import { cn } from "@ddal-kkak/shared";
 import { X } from "lucide-react";
+import { useCallback } from "react";
 
 const toastVariants = cva(["p-3 rounded-lg w-[240px] body-15"], {
   variants: {
@@ -55,8 +56,8 @@ export type ToastProps = VariantProps<typeof toastVariants> & {
   children?: React.ReactNode;
   align?: "left" | "center";
   onClick?: () => void;
-  Icon?: React.ComponentType;
-  isX?: boolean;
+  Icon?: React.ElementType | null;
+  isShowCloseIcon?: boolean;
 };
 
 function Toast({
@@ -66,23 +67,31 @@ function Toast({
   onClick,
   align = "left",
   Icon,
-  isX = true,
+  isShowCloseIcon = true,
 }: ToastProps) {
   const handleClickClose = () => {
     onClick?.();
   };
 
+  const LeftIcon = useCallback(() => {
+    return Icon ? <Icon /> : <Box isShow={align === "center"} />;
+  }, [Icon, align]);
+
+  const RightIcon = useCallback(() => {
+    return isShowCloseIcon ? (
+      <X className={"cursor-pointer"} onClick={handleClickClose} />
+    ) : (
+      <Box isShow={align === "center"} />
+    );
+  }, [isShowCloseIcon, align, handleClickClose]);
+
   return (
     <div className={cn("flex gap-2", toastVariants({ variant, theme }))}>
-      {Icon ? <Icon /> : <Box isShow={align === "center"} />}
+      <LeftIcon />
       <div className={cn("flex-1", align === "center" && "text-center")}>
         {children}
       </div>
-      {isX ? (
-        <X className={"cursor-pointer"} onClick={handleClickClose} />
-      ) : (
-        <Box isShow={align === "center"} />
-      )}
+      <RightIcon />
     </div>
   );
 }

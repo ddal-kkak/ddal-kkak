@@ -19,8 +19,8 @@ export type ToastParams = {
   second?: number;
   // TODO: 위치별로 토스트를 보여줄 수 있게
   // position?: "top-right" | "top-left" | "bottom-right" | "bottom-left";
-  clickClose?: () => void;
-  isX?: boolean;
+  handleClickClose?: () => void;
+  isShowCloseIcon?: boolean;
 };
 
 type ToastContextType = {
@@ -32,7 +32,6 @@ const ToastContext = createContext<ToastContextType | undefined>(undefined);
 
 export const useToast = () => {
   const context = useContext(ToastContext);
-  console.log("context", context);
 
   if (!context) {
     throw new Error("useToast must be used within a ToastProvider");
@@ -76,9 +75,9 @@ export function Toaster({ children }: PropsWithChildren) {
     const newToast: ToastParams & { id: number } = {
       id,
       ...option,
-      clickClose: () => {
+      handleClickClose: () => {
         removeToast(id);
-        option.clickClose?.();
+        option.handleClickClose?.();
       },
     };
 
@@ -104,8 +103,8 @@ export function Toaster({ children }: PropsWithChildren) {
             theme={rest.theme}
             align={rest.align}
             // Icon={rest.icon}
-            isX={rest.isX}
-            onClick={rest.clickClose as () => void}
+            isShowCloseIcon={rest.isShowCloseIcon}
+            onClick={rest.handleClickClose as () => void}
           >
             {message}
           </Toast>
