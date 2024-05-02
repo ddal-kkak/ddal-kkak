@@ -1,3 +1,5 @@
+import TestForm from "./_components/form";
+
 export default function BlockEditPage() {
-  return <div>page</div>
+  return <TestForm />;
 }
