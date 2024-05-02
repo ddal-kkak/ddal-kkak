@@ -4,12 +4,6 @@
   margin: 0;
 }
 
-
-body {
-  overflow-x: hidden;
-  min-height: 100vh;
-}
-
 ul[class],
 ol[class] {
   list-style: none;

@@ -1,11 +1,17 @@
-import styles from "./page.module.css";
-import { Button } from "@ddal-kkak/ui/atoms";
+import { Button } from '@ddal-kkak/ui/atoms'
+import Link from 'next/link'
+import Menu from '../components/Menu'
 
 export default function Page(): JSX.Element {
+  const menu = Menu()
   return (
-    <main className={styles.main}>
-      <div className={"bg-pink-500"}>Tailwind Setting Test</div>
-      <Button>Click me!</Button>
-    </main>
-  );
+    <section className="w-full grow max-w-screen-xl px-10 py-40 flex items-center flex-col gap-6 justify-center mx-auto">
+      <div className="text-headline30">딸깍으로 세상을 평정해보세요</div>
+      <Link href={menu.edit.href}>
+        <Button size="xl" className="tracking-wider">
+          마케팅페이지 딸깍 하러가기
+        </Button>
+      </Link>
+    </section>
+  )
 }
