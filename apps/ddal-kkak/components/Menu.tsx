@@ -14,6 +14,7 @@ export default function Menu() {
       icon: <IconHomeOutline />,
       clickedIcon: <IconHomeFill />,
       title: '홈',
+      isShow: true,
       isClicked: (pathname: string) => pathname === '/',
     },
     dashboard: {
@@ -22,15 +23,26 @@ export default function Menu() {
       icon: <IconDashboardOutline />,
       clickedIcon: <IconDashboardFill />,
       title: '대쉬보드',
+      isShow: true,
       isClicked: (pathname: string) => pathname.startsWith('/list'),
     },
     edit: {
       value: 'edit',
-      href: '/block/edit',
+      href: '/edit/block',
       icon: <IconEditOutline />,
       clickedIcon: <IconEditFill />,
       title: '에디터',
-      isClicked: (pathname: string) => pathname.startsWith('/block/edit'),
+      isShow: true,
+      isClicked: (pathname: string) => pathname.startsWith('/edit/block'),
+    },
+    preview: {
+      value: 'preview',
+      href: '/preview',
+      icon: <></>,
+      clickedIcon: <></>,
+      title: '미리보기',
+      isShow: false,
+      isClicked: (pathname: string) => pathname.startsWith('/edit/block'),
     },
   }
 }
