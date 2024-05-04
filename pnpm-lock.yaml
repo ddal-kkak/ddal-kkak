@@ -29,6 +29,9 @@ importers:
 
   apps/ddal-kkak:
     dependencies:
+      '@ddal-kkak/shared':
+        specifier: workspace:^
+        version: link:../../packages/shared
       '@ddal-kkak/tailwind-config':
         specifier: workspace:^
         version: link:../../packages/tailwind-config
