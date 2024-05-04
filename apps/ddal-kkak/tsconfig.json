@@ -13,7 +13,6 @@
       "@/hooks/*": ["hooks/*"],
       "@/lib/*": ["lib/*"],
       "@/types/*": ["types/*"],
-      "@/public/*": ["public/*"],
       "@/schemas/*": ["schemas/*"],
     }
   },
