@@ -56,7 +56,7 @@ export default function TestForm() {
           content
           <Input type="text" {...register(`metaTagList.0.content`)} />
         </label>
-        {fields.map((field, index) => (
+        {fields.map((field, index + 1) => (
           <>
             <label>
               meta
