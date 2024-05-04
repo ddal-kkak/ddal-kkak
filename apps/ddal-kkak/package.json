@@ -11,6 +11,7 @@
     "test:watch": "vitest"
   },
   "dependencies": {
+    "@ddal-kkak/shared": "workspace:^",
     "@ddal-kkak/tailwind-config": "workspace:^",
     "@ddal-kkak/ui": "workspace:*",
     "@hookform/resolvers": "^3.3.4",
