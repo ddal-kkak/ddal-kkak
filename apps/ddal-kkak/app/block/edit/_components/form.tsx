@@ -3,7 +3,7 @@ import { useFieldArray, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Button, Input } from "@ddal-kkak/ui/atoms";
-import { PageSchema } from "../../../../schema";
+import { PageSchema } from "@/schemas/editor";
 
 type PageSchemaType = z.infer<typeof PageSchema>;
 
