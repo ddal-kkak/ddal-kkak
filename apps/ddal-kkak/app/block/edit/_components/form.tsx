@@ -56,14 +56,14 @@ export default function TestForm() {
           content
           <Input type="text" {...register(`metaTagList.0.content`)} />
         </label>
-        {fields.map((field, index + 1) => (
+        {fields.map((field, index) => (
           <>
             <label>
               meta
               <Input
                 type="text"
                 key={field.id}
-                {...register(`metaTagList.${index}.property`)}
+                {...register(`metaTagList.${index + 1}.property`)}
               />
             </label>
             <label htmlFor="">
@@ -71,7 +71,7 @@ export default function TestForm() {
               <Input
                 type="text"
                 key={field.id}
-                {...register(`metaTagList.${index}.content`)}
+                {...register(`metaTagList.${index + 1}.content`)}
               />
             </label>
           </>
