@@ -1,8 +1,8 @@
 'use client'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import IconClickOutline from '../ui/icons/IconClickOutline'
-import Menu from './Menu'
+import IconClickOutline from '@/components/ui/icons/IconClickOutline'
+import Menu from '@/components/layout/Menu'
 
 export default function Header() {
   const pathname = usePathname()

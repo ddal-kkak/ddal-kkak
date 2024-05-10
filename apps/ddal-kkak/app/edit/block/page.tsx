@@ -1,4 +1,4 @@
-import EditorBlocks from '../../../components/editor/EditorBlocks'
+import EditorBlocks from '@/components/editor/EditorBlocks'
 
 export default function BlockEditPage() {
   return (

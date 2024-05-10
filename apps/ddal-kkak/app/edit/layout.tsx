@@ -1,8 +1,6 @@
-import { Button } from '@ddal-kkak/ui/atoms'
-import React from 'react'
-import HorizonLine from '../../components/ui/HorizonLine'
-import EditorButtons from '../../components/editor/EditorButtons'
-import EditorComponents from '../../components/editor/EditorComponents'
+import HorizonLine from '@/components/ui/HorizonLine'
+import EditorButtons from '@/components/editor/EditorButtons'
+import EditorComponents from '@/components/editor/EditorComponents'
 
 type EditorLayoutProps = {
   children: React.ReactNode

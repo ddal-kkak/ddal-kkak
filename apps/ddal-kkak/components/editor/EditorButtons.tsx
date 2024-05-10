@@ -1,6 +1,6 @@
 'use client'
 import { Button } from '@ddal-kkak/ui/atoms'
-import Menu from '../layout/Menu'
+import Menu from '@/components/layout/Menu'
 import { useRouter } from 'next/navigation'
 
 export default function EditorButtons() {
