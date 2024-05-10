@@ -2,8 +2,8 @@ import './globals.css'
 import '@ddal-kkak/tailwind-config/base.tailwind.css'
 import { Metadata } from 'next/dist/lib/metadata/types/metadata-interface'
 import { Open_Sans } from 'next/font/google'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import Header from '../components/layout/Header'
+import Footer from '../components/layout/Footer'
 
 const sans = Open_Sans({ subsets: ['latin'] })
 

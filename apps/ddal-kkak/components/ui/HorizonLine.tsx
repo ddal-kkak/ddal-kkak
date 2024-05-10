@@ -1,9 +1,12 @@
 import React from 'react'
+import { cn } from '../../../../../ddal-kkak/packages/shared'
 
 type Props = {
   className?: string
 }
 
 export default function HorizonLine({ className }: Props) {
-  return <div className={`border-b border-b-grey-200 w-full ${className}`} />
+  const combinedClass = cn('border-b', 'border-grey-200', 'w-full', className)
+
+  return <div className={combinedClass} />
 }

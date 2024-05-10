@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import IconClickOutline from './ui/icons/IconClickOutline'
+import IconClickOutline from '../ui/icons/IconClickOutline'
 import Menu from './Menu'
 
 export default function Header() {

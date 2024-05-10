@@ -1,6 +1,6 @@
 import { Button } from '@ddal-kkak/ui/atoms'
 import Link from 'next/link'
-import Menu from '../components/Menu'
+import Menu from '../components/layout/Menu'
 import IconClickFill from '../components/ui/icons/IconClickFill'
 
 export default function Page(): JSX.Element {
