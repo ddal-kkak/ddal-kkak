@@ -14,8 +14,8 @@
       "@/lib/*": ["lib/*"],
       "@/types/*": ["types/*"],
       "@/schemas/*": ["schemas/*"],
-      "@/__tests__/*": ["__tests__/*"],
-    }
+    },
+    "types": ["vitest", "@testing-library/jest-dom"]
   },
   "include": [
     "next-env.d.ts",

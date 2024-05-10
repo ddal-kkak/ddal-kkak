@@ -25,6 +25,7 @@
     "@ddal-kkak/eslint-config": "workspace:*",
     "@ddal-kkak/typescript-config": "workspace:*",
     "@next/eslint-plugin-next": "^14.1.1",
+    "@testing-library/jest-dom": "^6.4.5",
     "@testing-library/react": "^14.3.0",
     "@types/eslint": "^8.56.5",
     "@types/node": "^20.11.24",
