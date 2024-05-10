@@ -17,13 +17,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }): JSX.Element {
   return (
-    <html lang="en" className="bg-neutral-50 text-neutral-700">
+    <html lang="en">
       <head>
         <link rel="icon" href="./favicon.ico" type="image/x-icon" sizes="any" />
       </head>
-      <body className={`${sans.className} flex min-h-screen justify-between w-full flex-col`}>
+      <body className={`${sans.className}`}>
         <Header />
-        <main className="grow w-full max-w-screen-xl px-10 mx-auto">{children}</main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
