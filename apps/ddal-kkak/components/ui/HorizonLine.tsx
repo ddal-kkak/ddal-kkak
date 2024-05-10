@@ -1,5 +1,5 @@
 import React from 'react'
-import { cn } from '../../../../../ddal-kkak/packages/shared'
+import { cn } from '@ddal-kkak/shared'
 
 type Props = {
   className?: string

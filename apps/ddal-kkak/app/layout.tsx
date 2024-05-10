@@ -1,9 +1,9 @@
 import './globals.css'
 import '@ddal-kkak/tailwind-config/base.tailwind.css'
-import { Metadata } from 'next/dist/lib/metadata/types/metadata-interface'
 import { Open_Sans } from 'next/font/google'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
+import { Metadata } from 'next'
 
 const sans = Open_Sans({ subsets: ['latin'] })
 
@@ -18,9 +18,6 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }): JSX.Element {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="./favicon.ico" type="image/x-icon" sizes="any" />
-      </head>
       <body className={`${sans.className}`}>
         <Header />
         <main>{children}</main>

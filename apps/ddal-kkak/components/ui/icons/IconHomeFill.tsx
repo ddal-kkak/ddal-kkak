@@ -1,7 +1,8 @@
 import React from 'react'
 import { AiFillHome } from 'react-icons/ai'
 import { ReactIconsType } from './type'
+import { cn } from '@ddal-kkak/shared'
 
 export default function IconHomeFill({ className = 'text-2xl' }: ReactIconsType) {
-  return <AiFillHome className={className} />
+  return <AiFillHome className={cn('text-2xl', className)} />
 }

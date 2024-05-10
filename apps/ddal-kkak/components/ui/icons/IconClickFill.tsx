@@ -1,6 +1,7 @@
 import { PiCursorClickFill } from 'react-icons/pi'
 import { ReactIconsType } from './type'
+import { cn } from '@ddal-kkak/shared'
 
-export default function IconClickFill({ className = 'text-2xl' }: ReactIconsType) {
-  return <PiCursorClickFill className={className} />
+export default function IconClickFill({ className }: ReactIconsType) {
+  return <PiCursorClickFill className={cn('text-2xl', className)} />
 }
