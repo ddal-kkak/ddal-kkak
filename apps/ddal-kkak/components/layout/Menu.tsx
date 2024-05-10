@@ -1,10 +1,10 @@
 import React from 'react'
-import IconHomeOutline from '../ui/icons/IconHomeOutline'
-import IconHomeFill from '../ui/icons/IconHomeFill'
-import IconDashboardOutline from '../ui/icons/IconDashboardOutline'
-import IconDashboardFill from '../ui/icons/IconDashboardFill'
-import IconEditOutline from '../ui/icons/IconEditOutline'
-import IconEditFill from '../ui/icons/IconEditFill'
+import IconHomeOutline from '@/components/ui/icons/IconHomeOutline'
+import IconHomeFill from '@/components/ui/icons/IconHomeFill'
+import IconDashboardOutline from '@/components/ui/icons/IconDashboardOutline'
+import IconDashboardFill from '@/components/ui/icons/IconDashboardFill'
+import IconEditOutline from '@/components/ui/icons/IconEditOutline'
+import IconEditFill from '@/components/ui/icons/IconEditFill'
 
 export default function Menu() {
   return {
