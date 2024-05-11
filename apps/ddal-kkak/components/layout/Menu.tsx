@@ -11,7 +11,7 @@ export default function Menu() {
     home: {
       value: 'home',
       href: '/',
-      icon: <IconHomeOutline />,
+      Icon: IconHomeOutline,
       clickedIcon: <IconHomeFill />,
       title: '홈',
       isShow: true,

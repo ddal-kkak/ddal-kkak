@@ -2,11 +2,10 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import IconClickOutline from '@/components/ui/icons/IconClickOutline'
-import Menu from '@/components/layout/Menu'
+import { MENU, MENU_ROUTER } from 'constant/route'
 
 export default function Header() {
   const pathname = usePathname()
-  const menu = Menu()
 
   return (
     <header className="sticky top-0 z-30 border-b bg-white border-b-neutral-200 w-full">
@@ -17,19 +16,18 @@ export default function Header() {
         </Link>
         <nav>
           <ul className="flex items-center gap-4 py-5">
-            {Object.values(menu).map(
-              ({ isShow, value, href, title, clickedIcon, icon, isClicked }) =>
-                isShow && (
-                  <li key={value}>
-                    <Link href={href} aria-label={title}>
-                      <div className="flex items-center gap-1 text-title18">
-                        {isClicked(pathname) ? clickedIcon : icon}
-                        {title}
-                      </div>
-                    </Link>
-                  </li>
-                )
-            )}
+            {Object.values(MENU_ROUTER).map(({ value, title, isClicked, href, ClickedIcon, Icon }) => {
+              return (
+                <li key={value}>
+                  <Link href={href} aria-label={title}>
+                    <div className="flex items-center gap-1 text-title18">
+                      {isClicked(pathname) ? <ClickedIcon /> : <Icon />}
+                      {title}
+                    </div>
+                  </Link>
+                </li>
+              )
+            })}
           </ul>
         </nav>
       </div>
