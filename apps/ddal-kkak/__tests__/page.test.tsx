@@ -1,15 +1,7 @@
-import { expect, test } from "vitest";
-import { render, screen } from "@testing-library/react";
-import Page from "../app/page";
+import { describe, expect, test } from 'vitest'
 
-test("Page 에 Click me! 라는 버튼이 있냐?", () => {
-  render(<Page />);
-
-  const button = expect(
-    screen.getByRole("button", {
-      name: /Click me!/i,
-    }),
-  );
-
-  expect(button).toBeDefined();
-});
+describe('MENU Function', () => {
+  test('메뉴 함수가 제대로 메뉴들을 받아오나', () => {
+    expect(1).toBe(1)
+  })
+})

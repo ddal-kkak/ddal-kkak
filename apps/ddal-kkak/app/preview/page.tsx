@@ -1,3 +1,3 @@
 export default function PreviewPage() {
-  return <div>page</div>
+  return <div>PreviewPage</div>
 }
