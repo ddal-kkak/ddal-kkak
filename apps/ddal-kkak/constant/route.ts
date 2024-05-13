@@ -45,11 +45,11 @@ export const MENU_ROUTER: {
   dashboard: {
     type: 'MENU',
     value: 'dashboard',
-    href: '/list',
+    href: '/dashboard',
     Icon: IconDashboardOutline,
     ClickedIcon: IconDashboardFill,
     title: '대쉬보드',
-    isClicked: (pathname: string) => pathname.startsWith('/list'),
+    isClicked: (pathname: string) => pathname.startsWith('/dashboard'),
   },
   edit: {
     type: 'MENU',
