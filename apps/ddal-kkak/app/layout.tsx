@@ -4,6 +4,7 @@ import { Open_Sans } from 'next/font/google'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import { Metadata } from 'next'
+import ReactQueryProviders from 'context/ReactQueryProvider'
 
 const sans = Open_Sans({ subsets: ['latin'] })
 
@@ -19,9 +20,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
   return (
     <html lang="en">
       <body className={`${sans.className}`}>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <ReactQueryProviders>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </ReactQueryProviders>
       </body>
     </html>
   )
