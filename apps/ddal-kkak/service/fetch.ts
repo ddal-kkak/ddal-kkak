@@ -17,10 +17,8 @@ async function customFetch(config: CustomFetchConfig): Promise<Response> {
   // URL 생성 및 쿼리 파라미터 처리
   const url = new URL(`${API_URL}/${config.endpoint}`)
   if (config.params) {
-    Object.keys(config.params).forEach((key) => {
-      if (config.params && config.params[key]) {
-        url.searchParams.append(key, config.params[key])
-      }
+    Object.entries(config.params).forEach(([key, value]) => {
+      url.searchParams.append(key, value.toString())
     })
   }
 

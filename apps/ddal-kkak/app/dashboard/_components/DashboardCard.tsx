@@ -25,7 +25,7 @@ export default function DashboardCard({ item }: DashboardCardProps) {
       <div className="flex flex-col gap-2 p-6 items-end">
         <div className="flex items-center gap-4">
           <div>{isToggleActive ? '활성화' : '비활성화'}</div>
-          <ToggleButton size="lg" />
+          <ToggleButton size="md" />
           <Button variant="solid">편집하기</Button>
         </div>
         <Button variant="ghost">웹사이트 방문하기</Button>
