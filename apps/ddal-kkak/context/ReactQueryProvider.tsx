@@ -1,14 +1,13 @@
 'use client'
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import { useState } from 'react'
+import React from 'react'
 
 type Props = {
   children: React.ReactNode
 }
 
 function ReactQueryProviders({ children }: Props) {
-  const [client] = useState(
+  const [client] = React.useState(
     new QueryClient({
       defaultOptions: {
         queries: {
@@ -19,12 +18,7 @@ function ReactQueryProviders({ children }: Props) {
     })
   )
 
-  return (
-    <QueryClientProvider client={client}>
-      {children}
-      <ReactQueryDevtools initialIsOpen={false} />
-    </QueryClientProvider>
-  )
+  return <QueryClientProvider client={client}>{children}</QueryClientProvider>
 }
 
 export default ReactQueryProviders
