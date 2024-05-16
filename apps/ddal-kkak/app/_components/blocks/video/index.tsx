@@ -1,9 +1,9 @@
 "use client";
 
 import { Button } from "@ddal-kkak/ui/atoms";
-import { cn } from "@ddal-kkak/shared";
 import { TextBlock, TextBlockProps } from "@/app/_components/blocks";
 import { ButtonBlockData } from "@/app/_components/blocks/types";
+import { cn } from "@ddal-kkak/shared/utils";
 
 type VideoBlockProps = {
   blockData: {

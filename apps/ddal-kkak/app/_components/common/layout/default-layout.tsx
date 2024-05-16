@@ -1,5 +1,5 @@
 import { PropsWithChildren } from "react";
-import { cn } from "@ddal-kkak/shared";
+import { cn } from "@ddal-kkak/shared/utils";
 
 type DefaultLayoutProps = PropsWithChildren<{
   className?: string;

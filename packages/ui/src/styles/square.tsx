@@ -1,4 +1,4 @@
-import { cn } from "@ddal-kkak/shared";
+import { cn } from "@ddal-kkak/shared/utils";
 
 type SquareProps = {
   className: string;
