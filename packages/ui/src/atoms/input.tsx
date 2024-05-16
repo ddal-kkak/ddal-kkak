@@ -1,7 +1,7 @@
 "use client";
 import { forwardRef, InputHTMLAttributes } from "react";
-import { cn } from "@ddal-kkak/shared";
 import { cva, VariantProps } from "class-variance-authority";
+import { cn } from "@ddal-kkak/shared/utils";
 
 const inputVariants = cva(
   [

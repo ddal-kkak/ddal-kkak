@@ -2,7 +2,7 @@
 
 import { cva, VariantProps } from "class-variance-authority";
 import { ButtonHTMLAttributes, forwardRef } from "react";
-import { cn } from "@ddal-kkak/shared";
+import { cn } from "@ddal-kkak/shared/utils";
 
 const buttonVariants = cva(["bg-ui-01 border", "rounded-lg"], {
   variants: {

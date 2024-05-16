@@ -1,9 +1,9 @@
 "use client";
 
 import { cva, VariantProps } from "class-variance-authority";
-import { cn } from "@ddal-kkak/shared";
 import { X } from "lucide-react";
 import { useCallback } from "react";
+import { cn } from "@ddal-kkak/shared/utils";
 
 const toastVariants = cva(["p-3 rounded-lg w-[240px] body-15"], {
   variants: {
