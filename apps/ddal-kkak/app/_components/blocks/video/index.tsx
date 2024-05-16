@@ -44,8 +44,8 @@ export default function VideoBlock({ blockData, blockStyle }: VideoBlockProps) {
           "whitespace-pre-wrap",
         )}
       >
-        {textList.map((item) => (
-          <TextBlock {...item} />
+        {textList.map((textItem, index) => (
+          <TextBlock {...textItem} key={textItem + `${index}`} />
         ))}
         {buttonData ? <ButtonComponent {...buttonData} /> : null}
       </div>
