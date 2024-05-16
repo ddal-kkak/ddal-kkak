@@ -6,7 +6,7 @@ export const usePages = (id?: string) => {
 
   const { data, isLoading, isError, refetch } = useQuery({
     queryKey: ['pages', id],
-    queryFn: () => fetcher(),
+    queryFn: fetcher,
   })
 
   return { data, isLoading, isError, refetch }
