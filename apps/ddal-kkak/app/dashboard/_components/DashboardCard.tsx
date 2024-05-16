@@ -1,7 +1,9 @@
 import useToggleButton from '@/components/hook/useToggle'
 import { PagesType } from '@/types/pages'
 import { Button } from '@ddal-kkak/ui/atoms'
+import { MENU_ROUTER } from 'constant/route'
 import dayjs from 'dayjs'
+import { useRouter } from 'next/navigation'
 import React from 'react'
 
 type DashboardCardProps = {
@@ -10,6 +12,8 @@ type DashboardCardProps = {
 
 export default function DashboardCard({ item }: DashboardCardProps) {
   const { ToggleButton, isToggleActive, setIsToggleActive } = useToggleButton()
+  const router = useRouter()
+  const { edit } = MENU_ROUTER
   return (
     <div className="w-full max-w-screen-lg min-h-36 rounded border border-neutral-200 flex justify-between">
       <div className="flex-grow flex">
@@ -26,9 +30,13 @@ export default function DashboardCard({ item }: DashboardCardProps) {
         <div className="flex items-center gap-4">
           <div>{isToggleActive ? '활성화' : '비활성화'}</div>
           <ToggleButton size="md" />
-          <Button variant="solid">편집하기</Button>
+          <Button variant="solid" onClick={() => router.push(`${edit.href}/${item.id}`)}>
+            편집하기
+          </Button>
         </div>
-        <Button variant="ghost">웹사이트 방문하기</Button>
+        <Button variant="ghost" onClick={() => router.push(`/${item.slug}-${item.id}`)}>
+          웹사이트 방문하기
+        </Button>
       </div>
     </div>
   )

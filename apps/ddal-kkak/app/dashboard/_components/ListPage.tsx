@@ -13,7 +13,7 @@ export default function ListPage() {
   const router = useRouter()
 
   return (
-    <Container title="대쉬보드">
+    <Container title={MENU_ROUTER.dashboard.title}>
       <>
         {isLoading ? (
           <div className="w-full text-center py-10">
