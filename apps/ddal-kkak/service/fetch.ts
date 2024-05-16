@@ -13,7 +13,7 @@ const defaultHeaders: HeadersInit = {
 }
 const API_URL = 'https://port-0-ddal-kkak-api-rccln2llvthjqik.sel5.cloudtype.app'
 
-async function customFetch(config: CustomFetchConfig): Promise<Response> {
+async function customFetch(config: CustomFetchConfig) {
   // URL 생성 및 쿼리 파라미터 처리
   const url = new URL(`${API_URL}/${config.endpoint}`)
   if (config.params) {
@@ -42,7 +42,8 @@ async function customFetch(config: CustomFetchConfig): Promise<Response> {
     if (!response.ok) {
       throw new Error(`Error! Status: ${response.status}`)
     }
-    return response
+    const data = await response.json()
+    return data
   } catch (error) {
     console.error(error)
     throw error
