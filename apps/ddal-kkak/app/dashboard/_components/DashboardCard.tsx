@@ -1,19 +1,26 @@
 import useToggleButton from '@/components/hook/useToggle'
+import { useUpdateStatus } from '@/hooks/pages'
 import { PagesType } from '@/types/pages'
 import { Button } from '@ddal-kkak/ui/atoms'
 import { MENU_ROUTER } from 'constant/route'
 import dayjs from 'dayjs'
 import { useRouter } from 'next/navigation'
-import React from 'react'
+import React, { useEffect } from 'react'
 
 type DashboardCardProps = {
   item: PagesType
 }
 
 export default function DashboardCard({ item }: DashboardCardProps) {
-  const { ToggleButton, isToggleActive, setIsToggleActive } = useToggleButton()
+  const isPublished = item.status === 'PUBLISHED'
   const router = useRouter()
   const { edit } = MENU_ROUTER
+  const { mutateAsync, isPending } = useUpdateStatus(String(item.id))
+  const handleClickPublish = async () => {
+    const res = await mutateAsync(isPublished ? 'DRAFT' : 'PUBLISHED')
+    console.log(res)
+  }
+
   return (
     <div className="w-full max-w-screen-lg min-h-36 rounded border border-neutral-200 flex justify-between">
       <div className="flex-grow flex">
@@ -28,8 +35,9 @@ export default function DashboardCard({ item }: DashboardCardProps) {
       </div>
       <div className="flex flex-col gap-2 p-6 items-end">
         <div className="flex items-center gap-4">
-          <div>{isToggleActive ? '활성화' : '비활성화'}</div>
-          <ToggleButton size="md" />
+          <Button onClick={handleClickPublish} variant={'outline'} theme={isPublished ? 'secondary' : 'gray'}>
+            {isPublished ? '배포됨' : '배포하기'}
+          </Button>
           <Button variant="solid" onClick={() => router.push(`${edit.href}/${item.id}`)}>
             편집하기
           </Button>

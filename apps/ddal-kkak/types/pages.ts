@@ -1,11 +1,12 @@
 // type 관련 폴더
+export type PageStatusType = 'DRAFT' | 'PUBLISHED'
 export interface PagesType {
   id: number
   createdAt: string
   updatedAt: string
   title: string
   slug: string
-  status: 'DRAFT' | 'PUBLISHED'
+  status: PageStatusType
   uiJson: Record<string, any>
 }
 
@@ -23,7 +24,7 @@ export interface PageType {
   updatedAt: string
   title: string
   slug: string
-  status: string
+  status: PageStatusType
   uiJson: any
   metaTagList: MetaTagType[]
 }
