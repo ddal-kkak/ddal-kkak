@@ -12,3 +12,11 @@ export type JustifyContent =
   | "space-around"
   | "space-between"
   | "space-evenly";
+
+export type TextAlignment =
+  | "left"
+  | "center"
+  | "right"
+  | "justify"
+  | "initial"
+  | "inherit";
