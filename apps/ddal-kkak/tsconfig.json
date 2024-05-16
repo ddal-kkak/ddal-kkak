@@ -8,14 +8,30 @@
     ],
     "baseUrl": "./",
     "paths": {
-      "@/app/*": ["app/*"],
-      "@/components/*": ["components/*"],
-      "@/hooks/*": ["hooks/*"],
-      "@/lib/*": ["lib/*"],
-      "@/types/*": ["types/*"],
-      "@/schemas/*": ["schemas/*"],
+      "@/app/*": [
+        "app/*"
+      ],
+      "@/components/*": [
+        "components/*"
+      ],
+      "@/hooks/*": [
+        "hooks/*"
+      ],
+      "@/lib/*": [
+        "lib/*"
+      ],
+      "@/types/*": [
+        "types/*"
+      ],
+      "@/schemas/*": [
+        "schemas/*"
+      ]
     },
-    "types": ["vitest", "@testing-library/jest-dom"]
+    "types": [
+      "vitest",
+      "@testing-library/jest-dom"
+    ],
+    "jsx": "preserve"
   },
   "include": [
     "next-env.d.ts",
@@ -26,5 +42,7 @@
     "tailwind.config.js",
     "postcss.config.js"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }
