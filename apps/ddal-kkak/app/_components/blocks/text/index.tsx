@@ -1,33 +1,23 @@
 import { DefaultLayout } from "@/app/_components/common";
+import {
+  JustifyContent,
+  Padding,
+  TextAlignment,
+} from "@/app/_components/blocks/types";
 
-type TextBlockProps = {
+export type TextBlockProps = {
   blockData: {
     text: string;
   };
-  blockStyle: {
+  blockStyle?: {
     color?: string;
     fontWeight?: number;
     fontSize?: number;
-    textAlign?: "left" | "center" | "right" | "justify" | "initial" | "inherit";
+    textAlign?: TextAlignment;
     lineHeight?: number;
     backgroundColor?: string;
-    justifyContent?:
-      | "start"
-      | "end"
-      | "center"
-      | "stretch"
-      | "flex-start"
-      | "flex-end"
-      | "self-start"
-      | "self-end"
-      | "left"
-      | "right"
-      | "baseline";
-    paddingLeft?: number;
-    paddingRight?: number;
-    paddingTop?: number;
-    paddingBottom?: number;
-  };
+    justifyContent?: JustifyContent;
+  } & Padding;
 };
 
 export function TextBlock({ blockData, blockStyle }: TextBlockProps) {
@@ -44,7 +34,7 @@ export function TextBlock({ blockData, blockStyle }: TextBlockProps) {
     paddingRight = 0,
     paddingTop = 0,
     paddingBottom = 0,
-  } = blockStyle;
+  } = blockStyle ?? {};
 
   return (
     <div
