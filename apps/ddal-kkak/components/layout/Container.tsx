@@ -9,7 +9,7 @@ type ContainerProps = {
 
 export default function Container({ children, className, title }: PropsWithChildren<ContainerProps>) {
   return (
-    <div className={cn('relative w-full flex flex-col py-10 gap-10', className)}>
+    <div className={cn('relative w-full max-w-screen-xl mx-auto md:px-6 px-4 lg:px-10 flex flex-col py-10 gap-10', className)}>
       <h1 className="text-headline24">{title}</h1>
       {children}
     </div>

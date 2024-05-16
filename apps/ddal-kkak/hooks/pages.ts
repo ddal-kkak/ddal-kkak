@@ -1,5 +1,9 @@
+import { PagesType } from '@/types/pages'
 import { useQuery } from '@tanstack/react-query'
-import { getPages } from 'service/client'
+
+async function getPages(): Promise<PagesType[]> {
+  return fetch('/api/pages').then((res) => res.json())
+}
 
 export const usePages = (id?: string) => {
   const fetcher = id ? () => {} : getPages

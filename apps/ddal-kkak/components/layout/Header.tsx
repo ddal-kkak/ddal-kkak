@@ -6,9 +6,10 @@ import { MENU, MENU_ROUTER } from 'constant/route'
 
 export default function Header() {
   const pathname = usePathname()
+  const isVisible = Object.values(MENU_ROUTER).map((i) => i.isClicked)
 
   return (
-    <header className="sticky top-0 z-30 border-b bg-white border-b-neutral-200 w-full">
+    <header className={`sticky top-0 z-30 border-b bg-white border-b-neutral-200 w-full ${isVisible.some((fn) => fn(pathname)) ? 'block' : 'hidden'}`}>
       <div className="mx-auto flex w-full max-w-screen-xl items-center justify-between px-10">
         <Link href={'/'} aria-label="Home" className="flex gap-2 items-center">
           <h1 className=" text-headline24">딸깍</h1>

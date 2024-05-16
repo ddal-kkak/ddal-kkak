@@ -5,6 +5,6 @@ export interface PagesType {
   updatedAt: string
   title: string
   slug: string
-  status: 'DRAFT' | 'PUBLISHED' | 'ARCHIVED'
+  status: 'DRAFT' | 'PUBLISHED'
   uiJson: Record<string, any>
 }
