@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { transformStringToNumber } from "@/schemas/blocks/util";
+import { transformStringToNumber } from "@ddal-kkak/shared/utils";
 
 const hexColorRegex = /^#([0-9A-F]{3}|[0-9A-F]{6})$/i;
 
