@@ -15,7 +15,7 @@ export const TextBlockSchema = z.object({
         fontSize: z.number().optional(),
         textAlign: z.enum(["left", "center", "right", "justify"]).optional(),
         lineHeight: z.number().optional(),
-        backgroundColor: zodColor,
+        backgroundColor: zodColor.optional(),
         justifyContent: z
           .enum([
             "flex-start",
