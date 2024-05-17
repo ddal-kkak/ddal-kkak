@@ -1,15 +1,20 @@
-import React, { PropsWithChildren } from 'react'
+import React, { PropsWithChildren } from "react";
 
 type LabelTagProps = {
-  children: React.ReactNode
-  label: string
-}
+  children: React.ReactNode;
+  label: string;
+};
 
-export default function LabelTag({ children, label }: PropsWithChildren<LabelTagProps>) {
+export default function LabelTag({
+  children,
+  label,
+}: PropsWithChildren<LabelTagProps>) {
   return (
     <label className="w-full grid grid-cols-[80px_1fr]">
-      <span className="h-full flex items-center">{label}</span>
+      <span className="h-full flex items-center">
+        {label} <span className={"text-danger-01"}> *</span>
+      </span>
       {children}
     </label>
-  )
+  );
 }
