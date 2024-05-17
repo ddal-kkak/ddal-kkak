@@ -1,9 +1,12 @@
-import { transformStringToNumber } from "@ddal-kkak/shared/utils";
+import { isString } from "@ddal-kkak/shared/utils";
 import { z } from "zod";
 
 export const zodStringNumber = z.preprocess(
-  (char) => transformStringToNumber(char as string),
-  z.number(),
+  (inputString) =>
+    isString(inputString)
+      ? parseInt(z.string().parse(inputString))
+      : inputString,
+  z.number().min(0),
 );
 
 const hexColorRegex = /^#([0-9A-F]{3}|[0-9A-F]{6})$/i;
