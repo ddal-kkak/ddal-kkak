@@ -27,3 +27,13 @@ export async function updateStatus(values: { id: string; status: PageStatusType 
   }
   return customFetch(config)
 }
+
+export async function createPage(values: any) {
+  console.log(values)
+  const config: CustomFetchConfig = {
+    method: 'POST',
+    endpoint: `pages`,
+    body: values,
+  }
+  return customFetch(config)
+}

@@ -20,9 +20,10 @@ export default function ListPage() {
             <LoadingSpinner type="sync" />
           </div>
         ) : (
-          data && (
+          data &&
+          data.length > 0 && (
             <ul className="w-full flex gap-8 flex-col">
-              {(data as PagesType[]).map((item, idx) => (
+              {(data as PagesType[])?.map((item, idx) => (
                 <li key={item.id}>
                   <DashboardCard item={item} />
                 </li>

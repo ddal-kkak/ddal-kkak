@@ -1,5 +1,7 @@
 import { PageStatusType, PagesType, PageType } from '@/types/pages'
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
+import { PageSchema } from '../schemas'
+import { z } from 'zod'
 
 // 페이지 리스트
 async function getPages(): Promise<PagesType[]> {
@@ -57,6 +59,32 @@ export const useUpdateStatus = (id: string) => {
     },
     onSuccess: () => {
       console.log('status updated')
+    },
+  })
+
+  return { mutateAsync, isPending, isSuccess }
+}
+
+// 페이지 생성
+type Form = z.infer<typeof PageSchema>
+async function createPage(data: Form): Promise<any> {
+  const value = {
+    ...data.info,
+    metaTagList: data.metaTagList,
+    uiJson: {
+      dataList: data.dataList,
+    },
+  }
+  return fetch(`/api/pages`, {
+    method: 'POST',
+    body: JSON.stringify({ value }),
+  }).then((res) => res.json())
+}
+export const useCreatePage = () => {
+  const { mutateAsync, isPending, isSuccess } = useMutation({
+    mutationFn: (data: Form) => createPage(data),
+    onSuccess: () => {
+      console.log('page created')
     },
   })
 
