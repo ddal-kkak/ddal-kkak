@@ -1,6 +1,5 @@
 import { DefaultLayout } from "@/app/_components/common";
-import { BlockSchemaProps } from "@/schemas/blocks";
-import { ImageBlockSchema } from "@/schemas/blocks/image";
+import { BlockSchemaProps, ImageBlockSchema } from "@/schemas/blocks";
 
 type ImageBlockProps = BlockSchemaProps<typeof ImageBlockSchema>;
 

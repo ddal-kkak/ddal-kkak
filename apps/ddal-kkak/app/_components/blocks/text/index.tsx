@@ -1,6 +1,5 @@
 import { DefaultLayout } from "@/app/_components/common";
-import { BlockSchemaProps } from "@/schemas/blocks";
-import { TextBlockSchema } from "@/schemas/blocks/text";
+import { BlockSchemaProps, TextBlockSchema } from "@/schemas/blocks";
 
 export type TextBlockProps = BlockSchemaProps<typeof TextBlockSchema>;
 
