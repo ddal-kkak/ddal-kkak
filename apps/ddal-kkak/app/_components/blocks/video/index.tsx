@@ -1,25 +1,13 @@
 "use client";
 
 import { Button } from "@ddal-kkak/ui/atoms";
-import { TextBlock, TextBlockProps } from "@/app/_components/blocks";
-import { ButtonBlockData } from "@/app/_components/blocks/types";
+import { TextBlock } from "@/app/_components/blocks";
 import { cn } from "@ddal-kkak/shared/utils";
+import { BlockSchemaProps, VideoBlockSchema } from "@/schemas/blocks";
 
-type VideoBlockProps = {
-  blockData: {
-    buttonData?: ButtonBlockData;
-    videoUrl: string;
-    textList?: TextBlockProps[];
-  };
-  blockStyle: {
-    backgroundColor?: string;
-    maxHeight?: number;
-    width?: number;
-  };
-};
-
+type VideoBlockProps = BlockSchemaProps<typeof VideoBlockSchema>;
 export default function VideoBlock({ blockData, blockStyle }: VideoBlockProps) {
-  const { buttonData, videoUrl, textList = [] } = blockData;
+  const { buttonData, videoUrl, textBlockList = [] } = blockData;
   const {
     backgroundColor = "transparent",
     maxHeight = "100%",
@@ -53,7 +41,7 @@ export default function VideoBlock({ blockData, blockStyle }: VideoBlockProps) {
           "whitespace-pre-wrap",
         )}
       >
-        {textList.map((textItem, index) => (
+        {textBlockList.map((textItem, index) => (
           <TextBlock {...textItem} key={textItem + `${index}`} />
         ))}
         {buttonData ? <ButtonComponent {...buttonData} /> : null}

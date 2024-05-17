@@ -1,5 +1,4 @@
-import { BlockSchemaProps } from "@/schemas/blocks";
-import { SpacerBlockSchema } from "@/schemas/blocks/spacer";
+import { BlockSchemaProps, SpacerBlockSchema } from "@/schemas/blocks";
 
 type SpacerProps = BlockSchemaProps<typeof SpacerBlockSchema>;
 
