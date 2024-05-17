@@ -21,7 +21,7 @@ async function getPage(item?: PageType): Promise<PageType | undefined> {
 }
 export const usePage = (page?: PageType) => {
   const { data, isLoading, isError, refetch } = useQuery({
-    queryKey: ['page', page?.id || ''],
+    queryKey: page ? ['page', page.id] : ['page'],
     queryFn: () => getPage(page),
   })
 
