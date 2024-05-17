@@ -13,10 +13,4 @@ export type JustifyContent =
   | "space-between"
   | "space-evenly";
 
-export type TextAlignment =
-  | "left"
-  | "center"
-  | "right"
-  | "justify"
-  | "initial"
-  | "inherit";
+export type TextAlignment = "left" | "center" | "right" | "justify";
