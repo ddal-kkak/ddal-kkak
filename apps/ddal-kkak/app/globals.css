@@ -23,6 +23,9 @@ html {
 body {
   position: relative;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
   min-width: 360px;
 }
@@ -30,4 +33,5 @@ body {
 body > main {
   width: 100%;
   margin: 0 auto;
+  flex-grow: 1;
 }
