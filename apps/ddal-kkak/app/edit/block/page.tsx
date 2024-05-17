@@ -1,9 +1,7 @@
 import EditorBlocks from '@/components/editor/EditorBlocks'
 import EditorButtons from '@/components/editor/EditorButtons'
 import EditorComponents from '@/components/editor/EditorComponents'
-import Container from '@/components/layout/Container'
 import HorizonLine from '@/components/ui/HorizonLine'
-import { MENU_ROUTER } from 'constant/route'
 
 export default function BlockEditPage() {
   return (
