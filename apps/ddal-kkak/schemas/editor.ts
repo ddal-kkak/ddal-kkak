@@ -1,4 +1,10 @@
 import { z } from "zod";
+import {
+  ImageBlockSchema,
+  SpacerBlockSchema,
+  TextBlockSchema,
+  VideoBlockSchema,
+} from "@/schemas/blocks";
 
 const ERROR_MESSAGE = {
   REQUIRED: "필수임",
@@ -17,4 +23,11 @@ export const MetaTagSchema = z.object({
 export const PageSchema = z.object({
   info: InfoSchema,
   metaTagList: z.array(MetaTagSchema),
+  dataList: z
+    .array(
+      TextBlockSchema.or(SpacerBlockSchema)
+        .or(ImageBlockSchema)
+        .or(VideoBlockSchema),
+    )
+    .optional(),
 });

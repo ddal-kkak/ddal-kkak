@@ -6,8 +6,8 @@ export const ImageBlockSchema = z.object({
   name: z.literal("ImageBlock"),
   data: z.object({
     blockData: z.object({
-      src: z.string(),
-      alt: z.string(),
+      src: z.string().min(1),
+      alt: z.string().min(1),
     }),
     blockStyle: z
       .object({
@@ -24,6 +24,7 @@ export const ImageBlockSchema = z.object({
           ])
           .optional(),
       })
-      .merge(paddingSchema),
+      .merge(paddingSchema)
+      .optional(),
   }),
 });

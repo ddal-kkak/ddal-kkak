@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { zodColor } from "@/schemas/blocks/util";
+import { zodColor, zodStringNumber } from "@/schemas/blocks/util";
 import { paddingSchema } from "@/schemas/blocks";
 
 export const TextBlockSchema = z.object({
@@ -10,11 +10,11 @@ export const TextBlockSchema = z.object({
     }),
     blockStyle: z
       .object({
-        color: z.string().optional(),
-        fontWeight: z.number().optional(),
-        fontSize: z.number().optional(),
+        color: zodColor.optional(),
+        fontWeight: zodStringNumber.optional(),
+        fontSize: zodStringNumber.optional(),
         textAlign: z.enum(["left", "center", "right", "justify"]).optional(),
-        lineHeight: z.number().optional(),
+        lineHeight: zodStringNumber.optional(),
         backgroundColor: zodColor.optional(),
         justifyContent: z
           .enum([
@@ -27,6 +27,7 @@ export const TextBlockSchema = z.object({
           ])
           .optional(),
       })
-      .merge(paddingSchema),
+      .merge(paddingSchema)
+      .optional(),
   }),
 });
