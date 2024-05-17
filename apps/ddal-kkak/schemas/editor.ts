@@ -16,8 +16,8 @@ export const InfoSchema = z.object({
 });
 
 export const MetaTagSchema = z.object({
-  property: z.string().min(1),
-  content: z.string().min(1),
+  property: z.string().min(1, ERROR_MESSAGE.REQUIRED),
+  content: z.string().min(1, ERROR_MESSAGE.REQUIRED),
 });
 
 export const PageSchema = z.object({
