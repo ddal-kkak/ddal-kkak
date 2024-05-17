@@ -1,24 +1,8 @@
 import { DefaultLayout } from "@/app/_components/common";
-import {
-  JustifyContent,
-  Padding,
-  TextAlignment,
-} from "@/app/_components/blocks/types";
+import { BlockSchemaProps } from "@/schemas/blocks";
+import { TextBlockSchema } from "@/schemas/blocks/text";
 
-export type TextBlockProps = {
-  blockData: {
-    text: string;
-  };
-  blockStyle?: {
-    color?: string;
-    fontWeight?: number;
-    fontSize?: number;
-    textAlign?: TextAlignment;
-    lineHeight?: number;
-    backgroundColor?: string;
-    justifyContent?: JustifyContent;
-  } & Padding;
-};
+export type TextBlockProps = BlockSchemaProps<typeof TextBlockSchema>;
 
 export function TextBlock({ blockData, blockStyle }: TextBlockProps) {
   const { text } = blockData;
