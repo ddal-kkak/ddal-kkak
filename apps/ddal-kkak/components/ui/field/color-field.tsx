@@ -7,10 +7,10 @@ type InputFieldProps = {
 };
 
 export const ColorField = forwardRef<HTMLInputElement, InputFieldProps>(
-  function ({ label, isRequired }, ref) {
+  function ({ label, isRequired, ...rest }, ref) {
     return (
       <Label label={label} isRequired={isRequired}>
-        <input type={"color"} ref={ref} />
+        <input type={"color"} ref={ref} {...rest} />
       </Label>
     );
   },

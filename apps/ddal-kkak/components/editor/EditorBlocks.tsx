@@ -158,14 +158,13 @@ export default function EditorBlocks({ page }: EditorBlocksProps) {
 }
 
 function getFieldComponent(field: any, index: number) {
-  console.log(field.data);
   switch (field.name) {
     case "TextBlock":
-      return <TextField {...field.data} index={index} key={index} />;
+      return <TextField {...field.data} index={index} key={field.id} />;
     case "SpacerBlock":
-      return <SpacerField {...field.data} index={index} key={index} />;
+      return <SpacerField {...field.data} index={index} key={field.id} />;
     case "ImageBlock":
-      return <ImageField index={index} key={index} />;
+      return <ImageField index={index} key={field.id} />;
     case "VideoBlock":
     // return <VideoBlock />;
     default:
