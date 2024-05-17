@@ -7,7 +7,7 @@ export const SpacerBlockSchema = z.object({
     blockStyle: z
       .object({
         height: zodStringNumber,
-        backgroundColor: zodColor,
+        backgroundColor: zodColor.optional(),
       })
       .optional(),
   }),

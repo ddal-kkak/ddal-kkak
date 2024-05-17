@@ -1,28 +1,25 @@
 import { z } from "zod";
-import { zodColor } from "@/schemas/blocks/util";
+import { zodColor, zodStringNumber } from "@/schemas/blocks/util";
 import { paddingSchema } from "@/schemas/blocks";
 
-export const TextBlockSchema = z.object({
-  name: z.literal("TextBlock"),
+export const ImageBlockSchema = z.object({
+  name: z.literal("ImageBlock"),
   data: z.object({
     blockData: z.object({
-      text: z.string().min(1),
+      src: z.string(),
+      alt: z.string(),
     }),
     blockStyle: z
       .object({
-        color: z.string().optional(),
-        fontWeight: z.number().optional(),
-        fontSize: z.number().optional(),
-        textAlign: z.enum(["left", "center", "right", "justify"]).optional(),
-        lineHeight: z.number().optional(),
+        width: zodStringNumber.optional(),
         backgroundColor: zodColor.optional(),
         justifyContent: z
           .enum([
             "flex-start",
             "center",
             "flex-end",
-            "space-between",
             "space-around",
+            "space-between",
             "space-evenly",
           ])
           .optional(),
