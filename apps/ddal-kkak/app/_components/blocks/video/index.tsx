@@ -11,12 +11,20 @@ type VideoBlockProps = {
     videoUrl: string;
     textList?: TextBlockProps[];
   };
-  blockStyle: { backgroundColor?: string; maxHeight?: number };
+  blockStyle: {
+    backgroundColor?: string;
+    maxHeight?: number;
+    width?: number;
+  };
 };
 
 export default function VideoBlock({ blockData, blockStyle }: VideoBlockProps) {
   const { buttonData, videoUrl, textList = [] } = blockData;
-  const { backgroundColor = "transparent", maxHeight } = blockStyle;
+  const {
+    backgroundColor = "transparent",
+    maxHeight = "100%",
+    width = "100%",
+  } = blockStyle;
 
   return (
     <div
@@ -32,7 +40,8 @@ export default function VideoBlock({ blockData, blockStyle }: VideoBlockProps) {
         muted
         className={"object-cover"}
         style={{
-          maxHeight: maxHeight ? `${maxHeight}px` : "100%",
+          width,
+          maxHeight,
         }}
       >
         <source src={videoUrl} />
