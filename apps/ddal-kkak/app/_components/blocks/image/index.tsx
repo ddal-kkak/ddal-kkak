@@ -1,14 +1,8 @@
 import { DefaultLayout } from "@/app/_components/common";
-import { Image, JustifyContent, Padding } from "@/app/_components/blocks/types";
+import { BlockSchemaProps } from "@/schemas/blocks";
+import { ImageBlockSchema } from "@/schemas/blocks/image";
 
-type ImageBlockProps = {
-  blockData: {} & Image;
-  blockStyle?: {
-    width?: number;
-    backgroundColor?: string;
-    justifyContent?: JustifyContent;
-  } & Padding;
-};
+type ImageBlockProps = BlockSchemaProps<typeof ImageBlockSchema>;
 
 export function ImageBlock({ blockData, blockStyle }: ImageBlockProps) {
   const { src, alt } = blockData;
