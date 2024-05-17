@@ -1,6 +1,10 @@
 import { zodStringNumber } from "@/schemas/blocks/util";
 
 export * from "./spacer";
+export * from "./text";
+export * from "./video";
+export * from "./image";
+export * from "./util";
 
 import { z } from "zod";
 
